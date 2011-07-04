@@ -80,7 +80,7 @@ void Switch::initial(Switch *me)
 
 void Switch::off(Switch *me)
 {  
-  if (me->myNum > 4)  
+  if (me->myNum > 3)  
     bitSet(ANALOG_PORT, me->myPin);
   else
     bitSet(DIGITAL_PORT2, me->myPin);
@@ -91,7 +91,7 @@ void Switch::off(Switch *me)
   
 void Switch::on(Switch *me)
 {  
-  if (me->myNum > 4)  
+  if (me->myNum > 3)  
     bitClear(ANALOG_PORT, me->myPin);
   else
     bitClear(DIGITAL_PORT2, me->myPin);
